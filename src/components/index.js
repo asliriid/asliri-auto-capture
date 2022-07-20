@@ -1,2 +1,2 @@
 export { default as FaceDetection } from "./FaceDetection";
-export { default as Button } from "./Button";
+export { default as ButtonAsliri } from "./Button";
