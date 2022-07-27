@@ -37,12 +37,27 @@ var FaceDetection = function FaceDetection(_ref) {
   //   }
   //   fetchData();
   // }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(FaceCamera, {
+  // console.log(Logo);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement(FaceCamera, {
     imageType: "png",
     cameraFacing: "environment",
     photoTakenCb: onPhotoTaken,
     onError: onError
-  }));
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      right: 0,
+      bottom: 0,
+      padding: 24,
+      position: "absolute"
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "https://www.asliri.id/wp-content/uploads/2019/10/logo-ASLI-RI-non-retina.png",
+    height: 50
+  }))));
 };
 
 var ButtonAsliri = function ButtonAsliri(_ref) {

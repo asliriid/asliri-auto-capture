@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import 'dot-face-auto-capture';
+// import Logo from "../../../assets/logo-ASLI-RI-non-retina.png";
 
 const TOKEN = process.env.TOKEN_API;
 
@@ -37,14 +38,21 @@ const FaceDetection = ({ onPhotoTaken, onError, token }) => {
   //   fetchData();
   // }, []);
 
+  // console.log(Logo);
+
   return (
     <>
-      <FaceCamera
-        imageType="png"
-        cameraFacing="environment"
-        photoTakenCb={onPhotoTaken}
-        onError={onError}
-      />
+      <div style={{position: "relative"}}>
+        <FaceCamera
+          imageType="png"
+          cameraFacing="environment"
+          photoTakenCb={onPhotoTaken}
+          onError={onError}
+        />
+        <div style={{right: 0, bottom: 0, padding: 24, position: "absolute"}}>
+          <img src="https://www.asliri.id/wp-content/uploads/2019/10/logo-ASLI-RI-non-retina.png" height={50} />
+        </div>
+      </div>
     </>
   );
 };

@@ -7,6 +7,7 @@ import pkg from './package.json';
 import replace from 'rollup-plugin-replace';
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser';
+import image from '@rollup/plugin-image';
 
 const EXTENSIONS = ['.ts', '.tsx', '.js', '.jsx', '.json'];
 const CODES = [
@@ -66,7 +67,7 @@ export default [
                 'styled-components': 'styled',
             },
         },
-        plugins: [...commonPlugins(), env === 'production' && terser()],
+        plugins: [...commonPlugins(), env === 'production' && terser(), image()],
         external: [
             ...Object.keys(pkg.dependencies || {}),
             ...Object.keys(pkg.peerDependencies || {}),
