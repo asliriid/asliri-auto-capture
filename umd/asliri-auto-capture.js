@@ -59,9 +59,17 @@
         right: 0,
         bottom: 0,
         padding: 24,
-        position: "absolute"
+        position: "absolute",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       }
-    }, /*#__PURE__*/React__default["default"].createElement("img", {
+    }, /*#__PURE__*/React__default["default"].createElement("span", {
+      style: {
+        color: "#fff",
+        marginRight: 10
+      }
+    }, "Powered By"), /*#__PURE__*/React__default["default"].createElement("img", {
       src: "https://www.asliri.id/wp-content/uploads/2019/10/logo-ASLI-RI-non-retina.png",
       height: 50
     }))));
